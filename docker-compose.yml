@@ -1,0 +1,95 @@
+
+services:
+
+  kafka:
+    image: apache/kafka:3.7.0
+    container_name: order-kafka
+    ports:
+      - "7001:9094"
+    environment:
+      - KAFKA_NODE_ID=0
+      - KAFKA_PROCESS_ROLES=controller,broker
+      - KAFKA_CONTROLLER_QUORUM_VOTERS=0@order-kafka:9093
+      - KAFKA_CONTROLLER_LISTENER_NAMES=CONTROLLER
+
+      - KAFKA_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093,EXTERNAL://:9094
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://order-kafka:9092,EXTERNAL://localhost:7001
+      - KAFKA_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT
+      - KAFKA_INTER_BROKER_LISTENER_NAME=PLAINTEXT
+
+      - CLUSTER_ID=MkU3OEVBNTcwNTJENDM2Qk
+      - KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1
+
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: order-kafka-ui
+    ports:
+      - "7004:8080"
+    environment:
+      - KAFKA_CLUSTERS_0_NAME=order-cluster
+      - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=order-kafka:9092
+    depends_on:
+      - kafka
+
+  jobmanager:
+    build:
+      context: .
+      dockerfile: Dockerfile.flink
+    image: order-flink:2.0.0
+    container_name: order-flink-jobmanager
+    ports:
+      - "7002:8081"
+    command: jobmanager
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=jobmanager
+    volumes:
+      - ./orderconsumer.py:/opt/flink/jobs/orderconsumer.py:ro
+
+  taskmanager:
+    build:
+      context: .
+      dockerfile: Dockerfile.flink
+    image: order-flink:2.0.0
+    container_name: order-flink-taskmanager
+    depends_on:
+      - jobmanager
+    command: taskmanager
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=jobmanager
+    volumes:
+      - ./orderconsumer.py:/opt/flink/jobs/orderconsumer.py:ro
+
+  producer:
+    build:
+      context: .
+      dockerfile: Dockerfile.producer
+    container_name: order-producer
+    profiles:
+      - producer
+    depends_on:
+      - kafka
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      KAFKA_TOPIC: orders
+
+
+  postgres:
+    image: postgres:16
+    container_name: order-postgres
+    environment:
+      POSTGRES_USER: orders
+      POSTGRES_PASSWORD: orders
+      POSTGRES_DB: orders_db
+    ports:
+      - "7003:5432"
+    volumes:
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+
+volumes:
+  kafka_data:
+

@@ -1,0 +1,121 @@
+order_id,customer_name,product,amount
+ORD001,Ravi,Laptop,55000.00
+ORD002,Anjali,Mobile Phone,18000.00
+ORD003,Rahul,Mouse,850.00
+ORD004,Priya,Keyboard,2200.00
+ORD005,Arjun,Monitor,14500.00
+ORD006,Sneha,Headphones,3500.00
+ORD007,Kiran,Tablet,28000.00
+ORD008,Neha,Smart Watch,7500.00
+ORD009,Vikram,Printer,12500.00
+ORD010,Pooja,Camera,42000.00
+ORD011,Suresh,Laptop,68000.00
+ORD012,Divya,Mouse,950.00
+ORD013,Manoj,Mobile Phone,22000.00
+ORD014,Kavya,Keyboard,1800.00
+ORD015,Akash,Monitor,16500.00
+ORD016,Meena,Headphones,4800.00
+ORD017,Rohit,Tablet,32000.00
+ORD018,Swathi,Smart Watch,6500.00
+ORD019,Varun,Printer,11500.00
+ORD020,Deepika,Camera,37500.00
+ORD021,Abhishek,Laptop,72000.00
+ORD022,Lakshmi,Mobile Phone,9500.00
+ORD023,Naveen,Mouse,1200.00
+ORD024,Harini,Keyboard,2600.00
+ORD025,Teja,Monitor,13500.00
+ORD026,Keerthi,Headphones,2900.00
+ORD027,Surya,Tablet,24500.00
+ORD028,Shreya,Smart Watch,8200.00
+ORD029,Pranav,Printer,13200.00
+ORD030,Aishwarya,Camera,46000.00
+ORD031,Varsha,Laptop,61000.00
+ORD032,Karthik,Mobile Phone,17500.00
+ORD033,Anusha,Mouse,750.00
+ORD034,Ajay,Keyboard,3100.00
+ORD035,Nikhil,Monitor,15800.00
+ORD036,Riya,Headphones,5200.00
+ORD037,Venkat,Tablet,29500.00
+ORD038,Sanjana,Smart Watch,6800.00
+ORD039,Chaitanya,Printer,10800.00
+ORD040,Madhuri,Camera,39500.00
+ORD041,Praveen,Laptop,58000.00
+ORD042,Navya,Mobile Phone,14500.00
+ORD043,Aditya,Mouse,1100.00
+ORD044,Anjali,Keyboard,2400.00
+ORD045,Ramesh,Monitor,12900.00
+ORD046,Sravani,Headphones,4100.00
+ORD047,Manish,Tablet,27000.00
+ORD048,Divya,Smart Watch,7900.00
+ORD049,Sandeep,Printer,12100.00
+ORD050,Pallavi,Camera,43000.00
+ORD051,Rajesh,Laptop,75000.00
+ORD052,Shilpa,Mobile Phone,19500.00
+ORD053,Varun,Mouse,900.00
+ORD054,Harsha,Keyboard,2750.00
+ORD055,Swetha,Monitor,15200.00
+ORD056,Arun,Headphones,3300.00
+ORD057,Tejaswi,Tablet,31000.00
+ORD058,Raj,Smart Watch,5900.00
+ORD059,Sushma,Printer,14000.00
+ORD060,Suraj,Camera,35000.00
+ORD061,Mahesh,Laptop,62500.00
+ORD062,Pavani,Mobile Phone,16500.00
+ORD063,Krishna,Mouse,1350.00
+ORD064,Deepa,Keyboard,1950.00
+ORD065,Vamsi,Monitor,11800.00
+ORD066,Reshma,Headphones,4600.00
+ORD067,Abhinav,Tablet,26500.00
+ORD068,Tejas,Smart Watch,7200.00
+ORD069,Shalini,Printer,12750.00
+ORD070,Ganesh,Camera,41000.00
+ORD071,Harish,Laptop,69000.00
+ORD072,Chandana,Mobile Phone,21000.00
+ORD073,Varsha,Mouse,800.00
+ORD074,Manasa,Keyboard,2350.00
+ORD075,Rakesh,Monitor,14700.00
+ORD076,Anusha,Headphones,3800.00
+ORD077,Pradeep,Tablet,28500.00
+ORD078,Nandini,Smart Watch,6100.00
+ORD079,Ravi,Printer,10900.00
+ORD080,Priya,Camera,44000.00
+ORD081,Kiran,Laptop,73500.00
+ORD082,Neha,Mobile Phone,15500.00
+ORD083,Rohit,Mouse,1050.00
+ORD084,Sneha,Keyboard,2900.00
+ORD085,Arjun,Monitor,17200.00
+ORD086,Pooja,Headphones,4900.00
+ORD087,Vikram,Tablet,30500.00
+ORD088,Meena,Smart Watch,8500.00
+ORD089,Suresh,Printer,11600.00
+ORD090,Lakshmi,Camera,38500.00
+ORD091,Naveen,Laptop,64000.00
+ORD092,Kavya,Mobile Phone,18500.00
+ORD093,Akash,Mouse,1250.00
+ORD094,Meena,Keyboard,2100.00
+ORD095,Manoj,Monitor,13900.00
+ORD096,Sneha,Headphones,3600.00
+ORD097,Rahul,Tablet,25500.00
+ORD098,Divya,Smart Watch,7700.00
+ORD099,Abhishek,Printer,13400.00
+ORD100,Riya,Camera,47000.00
+ORD101,Chaitanya,Laptop,59000.00
+ORD102,Aishwarya,Mobile Phone,23000.00
+ORD103,Pranav,Mouse,980.00
+ORD104,Keerthi,Keyboard,3200.00
+ORD105,Surya,Monitor,15500.00
+ORD106,Shreya,Headphones,4400.00
+ORD107,Venkat,Tablet,27500.00
+ORD108,Sanjana,Smart Watch,6900.00
+ORD109,Ajay,Printer,11200.00
+ORD110,Nikhil,Camera,40500.00
+ORD111,Praveen,Laptop,67000.00
+ORD112,Navya,Mobile Phone,17200.00
+ORD113,Aditya,Mouse,1150.00
+ORD114,Harini,Keyboard,2800.00
+ORD115,Ramesh,Monitor,14800.00
+ORD116,Sravani,Headphones,5100.00
+ORD117,Manish,Tablet,29000.00
+ORD118,Swathi,Smart Watch,6300.00
+ORD119,Sandeep,Printer,11900.00
+ORD120,Pallavi,Camera,45500.00
